@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    gateway:
+        routes:
+        - id: keycloak
+          uri: lb://keycloak
+          predicates:
+          - Path=/keycloak/**
+          filters:
+          - RewritePath=/keycloak/(?<path>.*), /$\{path}
