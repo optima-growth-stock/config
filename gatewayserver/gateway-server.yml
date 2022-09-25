@@ -17,6 +17,9 @@ spring:
         locator:
           enabled: true
           lowerCaseServiceId: true
+  sleuth:
+    sampler:
+      percentage: 1
 
 management:
   endpoints:
